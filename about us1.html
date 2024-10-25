@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Tech Learning Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+        }
+
+        .nav {
+            background: linear-gradient(135deg, #2193b0, #6dd5ed);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            height: 90px;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: white;
+            margin: 0 1.5rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+
+        .nav a:hover::after {
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            padding: 3rem 0;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            margin-bottom: 3rem;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .teacher-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .teacher {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .teacher-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .teacher-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .teacher-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .teacher-info {
+            padding: 1.5rem;
+        }
+
+        .teacher-info h2 {
+            color: #2d3436;
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .teacher-info .subject {
+            color: #636e72;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .teacher-info .expertise {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .expertise-tag {
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav a {
+                margin: 0 1rem;
+                font-size: 1rem;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .teacher {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="home1.html">Home</a>
+            <a href="course.html">Courses</a>
+            <a href="rating1.html">Rating</a>
+            <a href="about us1.html">About Us</a>
+            <a href="login.html">Login</a>
+            <a href="Signup.html">Sign up</a>
+        </div>
+    </nav>
+
+    <header class="header">
+        <h1>Meet Our Expert Instructors</h1>
+        <p>Learn from industry professionals with years of experience in their respective fields. Our instructors are passionate about teaching and committed to your success.</p>
+    </header>
+
+    <div class="teacher-section">
+        <div class="teacher">
+            <div class="teacher-card">
+                <img src="6107336971589369869.jpg" alt="Caroline">
+                <div class="teacher-info">
+                    <h2>Caroline</h2>
+                    <div class="subject">Frontend Development Expert</div>
+                    <div class="expertise">
+                        <span class="expertise-tag">HTML5</span>
+                        <span class="expertise-tag">CSS3</span>
+                        <span class="expertise-tag">JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teacher-card">
+                <img src="6107336971589369870.jpg" alt="Diana">
+                <div class="teacher-info">
+                    <h2>Diana</h2>
+                    <div class="subject">Python Development Expert</div>
+                    <div class="expertise">
+                        <span class="expertise-tag">Python</span>
+                        <span class="expertise-tag">Django</span>
+                        <span class="expertise-tag">Flask</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teacher-card">
+                <img src="6107336971589369871.jpg" alt="Emily">
+                <div class="teacher-info">
+                    <h2>Emily</h2>
+                    <div class="subject">C++ Development Expert</div>
+                    <div class="expertise">
+                        <span class="expertise-tag">C++</span>
+                        <span class="expertise-tag">Data Structures</span>
+                        <span class="expertise-tag">Algorithms</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teacher-card">
+                <img src="6107336971589369872.jpg" alt="Katherine">
+                <div class="teacher-info">
+                    <h2>Katherine</h2>
+                    <div class="subject">Java Development Expert</div>
+                    <div class="expertise">
+                        <span class="expertise-tag">Java</span>
+                        <span class="expertise-tag">Spring</span>
+                        <span class="expertise-tag">Hibernate</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teacher-card">
+                <img src="6107336971589369873.jpg" alt="Michael">
+                <div class="teacher-info">
+                    <h2>Michael</h2>
+                    <div class="subject">Full Stack Development Expert</div>
+                    <div class="expertise">
+                        <span class="expertise-tag">React</span>
+                        <span class="expertise-tag">Node.js</span>
+                        <span class="expertise-tag">MongoDB</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teacher-card">
+                <img src="6107336971589369874.jpg" alt="Alexander">
+                <div class="teacher-info">
+                    <h2>Alexander</h2>
+                    <div class="subject">Database Expert</div>
+                    <div class="expertise">
+                        <span class="expertise-tag">SQL</span>
+                        <span class="expertise-tag">PostgreSQL</span>
+                        <span class="expertise-tag">MySQL</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teacher-card">
+                <img src="6107336971589369875.jpg" alt="Olivia">
+                <div class="teacher-info">
+                    <h2>Olivia</h2>
+                    <div class="subject">System Administration Expert</div>
+                    <div class="expertise">
+                        <span class="expertise-tag">Linux</span>
+                        <span class="expertise-tag">Shell Scripting</span>
+                        <span class="expertise-tag">DevOps</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teacher-card">
+                <img src="6107336971589369876.jpg" alt="Irene">
+                <div class="teacher-info">
+                    <h2>Irene</h2>
+                    <div class="subject">Professional Skills Expert</div>
+                    <div class="expertise">
+                        <span class="expertise-tag">Communication</span>
+                        <span class="expertise-tag">Leadership</span>
+                        <span class="expertise-tag">Soft Skills</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teacher-card">
+                <img src="6107336971589369877.jpg" alt="Felicity">
+                <div class="teacher-info">
+                    <h2>Felicity</h2>
+                    <div class="subject">C Programming Expert</div>
+                    <div class="expertise">
+                        <span class="expertise-tag">C</span>
+                        <span class="expertise-tag">System Programming</span>
+                        <span class="expertise-tag">Embedded Systems</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

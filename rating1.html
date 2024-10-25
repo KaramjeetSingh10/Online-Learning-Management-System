@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Reviews & Ratings</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+        }
+
+        .nav {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: white;
+            margin: 0 1.5rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .nav a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .header {
+            text-align: center;
+            padding: 3rem 0;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            margin-bottom: 3rem;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem 2rem;
+            border-radius: 10px;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .reviews-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .review-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .review-card::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 8rem;
+            color: rgba(103, 126, 234, 0.1);
+            font-family: serif;
+        }
+
+        .customer-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 3px solid #667eea;
+        }
+
+        .customer-name {
+            font-size: 1.2rem;
+            color: #2d3436;
+            margin-bottom: 0.5rem;
+        }
+
+        .customer-title {
+            color: #636e72;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .rating {
+            color: #ffd700;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .review-text {
+            color: #636e72;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        .course-tag {
+            display: inline-block;
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav a {
+                margin: 0 0.5rem;
+                font-size: 1rem;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .stats {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .stat-item {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="home1.html">Home</a>
+            <a href="course.html">Courses</a>
+            <a href="rating1.html">Rating</a>
+            <a href="about us1.html">About Us</a>
+            <a href="login.html">Login</a>
+            <a href="Signup.html">Sign up</a>
+        </div>
+    </nav>
+
+    <header class="header">
+        <h1>What Our Students Say</h1>
+        <p>Discover why thousands of students trust us with their learning journey</p>
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number">15,000+</div>
+                <div>Happy Students</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">4.8/5</div>
+                <div>Average Rating</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">98%</div>
+                <div>Satisfaction Rate</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="reviews-container">
+        <div class="reviews-grid">
+            <div class="review-card">
+                <img src="blog-1.jpg" alt="Lukebakio" class="customer-img">
+                <h3 class="customer-name">Lukebakio</h3>
+                <div class="customer-title">Web Development Student</div>
+                <div class="rating">★★★★★</div>
+                <p class="review-text">The JavaScript course exceeded my expectations. The instructor's approach to teaching complex concepts made them easy to understand. I've already started applying what I learned in my projects.</p>
+                <span class="course-tag">JavaScript Fundamentals</span>
+            </div>
+
+            <div class="review-card">
+                <img src="blog-2.jpg" alt="William" class="customer-img">
+                <h3 class="customer-name">William</h3>
+                <div class="customer-title">Data Science Enthusiast</div>
+                <div class="rating">★★★★★</div>
+                <p class="review-text">The Python course was comprehensive and well-structured. The practical exercises and real-world projects helped me gain confidence in programming.</p>
+                <span class="course-tag">Python for Data Science</span>
+            </div>
+
+            <div class="review-card">
+                <img src="blog-3.jpg" alt="Emma" class="customer-img">
+                <h3 class="customer-name">Emma</h3>
+                <div class="customer-title">Frontend Developer</div>
+                <div class="rating">★★★★½</div>
+                <p class="review-text">The React course was exactly what I needed to level up my frontend skills. The instructor's expertise and teaching style made complex concepts accessible.</p>
+                <span class="course-tag">React Development</span>
+            </div>
+
+            <div class="review-card">
+                <img src="blog-4.jpg" alt="Aarush" class="customer-img">
+                <h3 class="customer-name">Aarush</h3>
+                <div class="customer-title">Software Engineering Student</div>
+                <div class="rating">★★★★★</div>
+                <p class="review-text">The C++ course provided a solid foundation in programming concepts. The hands-on projects were challenging and helped reinforce the learning.</p>
+                <span class="course-tag">C++ Programming</span>
+            </div>
+
+            <div class="review-card">
+                <img src="blog-5.jpg" alt="Kendal" class="customer-img">
+                <h3 class="customer-name">Kendal</h3>
+                <div class="customer-title">Backend Developer</div>
+                <div class="rating">★★★★★</div>
+                <p class="review-text">The Node.js course was fantastic! The instructor's deep knowledge and real-world examples made the learning experience outstanding.</p>
+                <span class="course-tag">Node.js Development</span>
+            </div>
+
+            <div class="review-card">
+                <img src="blog-6.jpg" alt="Smith" class="customer-img">
+                <h3 class="customer-name">Smith</h3>
+                <div class="customer-title">Database Administrator</div>
+                <div class="rating">★★★★½</div>
+                <p class="review-text">The SQL course was comprehensive and practical. The exercises helped me understand database concepts thoroughly.</p>
+                <span class="course-tag">SQL Mastery</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
